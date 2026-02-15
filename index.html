@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Квест "Код Лиды"</title>
+  <meta name="description" content="Квест по Лиде: 8 точек на карте, вопросы и буквы, финал и бонус." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="language-switcher" data-language-switcher></div>
+      <nav class="site-nav" aria-label="Навигация">
+      <a class="header-nav-button" href="index.html" aria-current="page">Главная</a>
+      <a class="header-nav-button" href="pages/map.html">Карта</a>
+      <a class="header-nav-button" href="pages/progress.html">Прогресс</a>
+      <a class="header-nav-button" href="pages/final.html">Финал</a>
+      <a class="header-nav-button" href="pages/bonus.html">Бонус</a>
+      <a class="header-nav-button" href="pages/sources.html">Источники</a>
+    </nav>
+      <div class="theme-switcher" data-theme-switcher></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>О нас:</h2>
+      <p>
+        Квест "Код Лиды" - это городская прогулка в формате мини-игры.
+        Ты проходишь маршрут по порядку: точка за точкой.
+        По пути читаешь интересные факты и прямо на сайте отвечаешь на вопросы.
+        За каждую пройденную точку ты получаешь букву. 
+        Всего букв 8 - из них собирается ключевое слово, которое пригодится в финале.
+        Удобно и то, что прогресс сохраняется в браузере - поэтому квест можно проходить
+        в своем темпе, хоть за один раз, хоть частями.
+      </p>
+    </section>
+    <section class="card">
+      <h2>Пройди 8 точек и собери ключевое слово:</h2>
+      <p>
+        8 контрольных точек по Лиде - и одно ключевое слово в конце.
+        На каждой точке тебя ждет короткий факт о месте и вопросы по тексту.
+        Пройдешь точку полностью - получишь букву и откроешь следующую часть карты.
+        Соберешь все 8 букв, введешь ключевое слово на странице "Финал" - и откроется бонусная точка.
+      </p>
+
+      <div class="actions  actions-split">
+        <a class="button_secondary action-button action-button-primary" href="#rules">Правила</a>
+        <a class="button_quest action-button action-button-primary" href="pages/map.html">Начать квест</a>
+      </div>
+    </section>
+
+    <section class="card" id="rules">
+      <h2>Правила:</h2>
+      <ol>
+        <li>Открой "Карту" и выбери доступную точку маршрута. Старт - с первой точки.</li>
+        <li>На точке сначала прочитай факт, потом ответь на вопросы - только после этого тебе начислится буква.</li>
+        <li>Вопросы бывают двух типов: Тест - 3 варианта ответа, правильный только один. Ввод текста - нужно вписать фразу из интересного факта (можно копировать через "CTRL+C").</li>
+        <li>Проходи все по порядку - следующая точка откроется только после полного прохождения текущей.</li>
+        <li>Финал откроется, когда соберешь 8 букв - введи ключевое слово, и появится бонусная точка.</li>
+      </ol>
+    </section>
+
+    <section class="card route-card" id="points">
+      <div class="route-header">
+        <h3>Точки маршрута:</h3>
+        <span class="pill route-letters-pill">Буквы: <strong data-letters>- - - - - - - -</strong></span>
+        <span class="pill">Пройдено: <strong data-progress>0/8</strong></span>
+      </div>
+      <progress class="route-progressbar" max="8" value="0" aria-label="Прогресс по точкам маршрута"></progress>
+      <ul class="route-list" data-route-list></ul>
+      <div class="route-hint" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card" aria-label="Вопросы">
+      <h2>Часто встречающиеся вопросы:</h2>
+      <details class="faq-item">
+        <summary class="faq-title">Нужно ли искать решения в интернете?</summary>
+        <div class="faq-content muted">
+          Нет, не нужно! Все подсказки и правильные ответы уже есть в тексте на странице точки маршрута.
+          Если начать искать в сети, легко запутаться - формулировки и факты могут отличаться.
+          Поэтому просто внимательно прочитай текст на точке и отвечай по нему.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-title">Сколько времени занимает квест?</summary>
+        <div class="faq-content muted">
+          В среднем квест проходит за 15–20 минут, но это только интерактивная часть.
+          Если пойти по «Точкам маршрута»,
+          вы можете гарантировать себе увлекательнейшие 
+          3–4 часа прогулки по самым знаковым местам Лиды.
+          Но всё зависит от вашего темпа прохождения и того,
+          как быстро вы анализируете прочитанную вами информацию и отвечаете на вопросы.<br>
+          Хочешь  проходи частями, делай паузы между точками.<br>
+          Прогресс сохраняется в браузере, поэтому можно вернуться в любой момент.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-title">Нужна ли геолокация?</summary>
+        <div class="faq-content muted">
+          Нет, геолокация не нужна. Это веб-квест, он работает прямо в браузере.
+          <br> Проходить можно где угодно - дома или в дороге.
+          А если захочешь, <br> легко можно совместить квест с прогулкой по городу.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-title">Что если прогресс сбросился?</summary>
+        <div class="faq-content muted">
+          Прогресс хранится в браузере на этом устройстве.<br>Он может пропасть, если очистить данные сайта,<br>
+          открыть квест в режиме инкогнито или зайти в квест через другой браузер.<br>
+          Иногда данные сбрасываются из-за автоочистки или расширений для приватности.<br>
+          Если такое случится, просто начни прохождение заново.
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-desc">
+        Квест "Код Лиды" - интерактивная прогулка по городу Лида в Беларуси.<br>
+        Ты проходишь 8 точек маршрута,читаешь факты и отвечаешь на вопросы прямо на сайте.<br>
+        За каждую точку получаешь букву - собери все 8, чтобы открыть финал.<br>
+        Главная историческая остановка маршрута - Лидский замок.<br>
+        Его заложили в 1323 году по инициативе князя Гедимина.<br>
+        Прогресс сохраняется в браузере - так что можно идти в<br> своем темпе,
+        сделать паузу и вернуться позже, продолжив с того же места.
+      </p>
+      <nav class="footer-nav" aria-label="Ссылки в подвале">
+        <a class="footer-nav-button" href="index.html#rules">Правила</a>
+        <a class="footer-nav-button" href="pages/map.html">Карта</a>
+        <a class="footer-nav-button" href="pages/sources.html">Источники</a>
+      </nav>
+    </div>
+  </footer>
+<script src="js/theme.js" defer></script>
+  <script src="js/quest-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

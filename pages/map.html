@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Карта - Квест "Код Лиды"</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/themes.css" />
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+</head>
+<body class="page-map">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="language-switcher" data-language-switcher></div>
+      <nav class="site-nav" aria-label="Навигация">
+      <a class="header-nav-button" href="../index.html">Главная</a>
+      <a class="header-nav-button" href="map.html" aria-current="page">Карта</a>
+      <a class="header-nav-button" href="progress.html">Прогресс</a>
+      <a class="header-nav-button" href="final.html">Финал</a>
+      <a class="header-nav-button" href="bonus.html">Бонус</a>
+      <a class="header-nav-button" href="sources.html">Источники</a>
+    </nav>
+      <div class="theme-switcher" data-theme-switcher></div>
+    </div>
+  </header>
+
+  <main class="container page-map-main">
+    <section class="card route-card">
+      <div class="route-header">
+        <h2>Карта маршрута:</h2>
+        <span class="pill route-letters-pill">Буквы: <strong data-letters>- - - - - - - -</strong></span>
+        <span class="pill">Пройдено: <strong data-map-progress>0/8</strong></span>
+      </div>
+      <progress
+        class="route-progressbar"
+        data-map-progressbar
+        max="8"
+        value="0"
+        aria-label="Прогресс по точкам маршрута"
+      ></progress>
+      <div id="map-status" class="route-hint" role="status" aria-live="polite"></div>
+
+      <div class="map-shell" aria-label="Интерактивная карта Лиды с точками квеста">
+        <div id="map" class="quest-map"></div>
+
+        <div id="map-fallback" class="map-fallback hidden" aria-label="Карта в резервном режиме">
+          <img src="../assets/images/points/map-fallback.jpg" alt="Карта Лиды" />
+          <div id="map-fallback-markers" class="map-fallback-markers"></div>
+        </div>
+      </div>
+
+      <div class="actions map-route-actions">
+        <a class="map-route-button action-button action-button-primary" href="../index.html#points">К точкам маршрута</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="point-modal" class="map-modal hidden" aria-hidden="true">
+    <button type="button" class="map-modal-backdrop" data-modal-close aria-label="Закрыть окно"></button>
+    <section class="map-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="map-modal-title">
+      <button type="button" class="map-modal-close" data-modal-close aria-label="Закрыть">x</button>
+      <h3 id="map-modal-title"></h3>
+      <img id="map-modal-image" src="../assets/images/points/placeholder.png" alt="Фото точки" />
+      <div id="map-modal-text" class="formatted-text"></div>
+      <div class="actions">
+        <a id="map-modal-link" class="action-button action-button-primary" href="#">Перейти к тесту</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-desc">
+        Квест "Код Лиды" - интерактивная прогулка по городу Лида в Беларуси.<br>
+        Ты проходишь 8 точек маршрута,читаешь факты и отвечаешь на вопросы прямо на сайте.<br>
+        За каждую точку получаешь букву - собери все 8, чтобы открыть финал.<br>
+        Главная историческая остановка маршрута - Лидский замок.<br>
+        Его заложили в 1323 году по инициативе князя Гедимина.<br>
+        Прогресс сохраняется в браузере - так что можно идти в<br> своем темпе,
+        сделать паузу и вернуться позже, продолжив с того же места.
+      </p>
+      <nav class="footer-nav" aria-label="Ссылки в подвале">
+        <a class="footer-nav-button" href="../index.html#rules">Правила</a>
+        <a class="footer-nav-button" href="map.html">Карта</a>
+        <a class="footer-nav-button" href="sources.html">Источники</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+<script src="../js/quest-data.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/map.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

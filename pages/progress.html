@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/themes.css" />
+</head>
+<body class="page-progress">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="language-switcher" data-language-switcher></div>
+      <nav class="site-nav" aria-label="Навигация">
+      <a class="header-nav-button" href="../index.html">Главная</a>
+      <a class="header-nav-button" href="map.html">Карта</a>
+      <a class="header-nav-button" href="progress.html">Прогресс</a>
+      <a class="header-nav-button" href="final.html">Финал</a>
+      <a class="header-nav-button" href="bonus.html">Бонус</a>
+      <a class="header-nav-button" href="sources.html">Источники</a>
+    </nav>
+      <div class="theme-switcher" data-theme-switcher></div>
+    </div>
+  </header>
+
+  <main class="container page-progress-main">
+    <section class="card" aria-label="Прогресс">
+      <h2>Мой прогресс:</h2>
+      <p class="muted">
+        Прогресс сохраняется на этом устройстве (в браузере). Если чистишь кэш/куки - прогресс может сброситься.
+      </p>
+
+      <p class="muted" data-nextstep>Следующий шаг: открой карту и выбери доступную точку.</p>
+
+      <div class="actions">
+        <a class="progress-open-map-button action-button action-button-primary" href="map.html">Открыть карту</a>
+        <a class="progress-route-points-button action-button action-button-primary" href="../index.html#points">К точкам маршрута</a>
+        <span class="pill" aria-label="Буквы">Буквы: <strong data-letters>- - - - - - - -</strong></span>
+        <span class="pill" aria-label="Пройдено">Пройдено: <strong data-progress>0/8</strong></span>
+        <button class="progress-reset-button action-button action-button-primary" type="button" data-reset>Сбросить прогресс</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-desc">
+        Квест "Код Лиды" - интерактивная прогулка по городу Лида в Беларуси.<br>
+        Ты проходишь 8 точек маршрута,читаешь факты и отвечаешь на вопросы прямо на сайте.<br>
+        За каждую точку получаешь букву - собери все 8, чтобы открыть финал.<br>
+        Главная историческая остановка маршрута - Лидский замок.<br>
+        Его заложили в 1323 году по инициативе князя Гедимина.<br>
+        Прогресс сохраняется в браузере - так что можно идти в<br> своем темпе,
+        сделать паузу и вернуться позже, продолжив с того же места.
+      </p>
+      <nav class="footer-nav" aria-label="Ссылки в подвале">
+        <a class="footer-nav-button" href="../index.html#rules">Правила</a>
+        <a class="footer-nav-button" href="map.html">Карта</a>
+        <a class="footer-nav-button" href="sources.html">Источники</a>
+      </nav>
+    </div>
+  </footer>
+<script src="../js/theme.js" defer></script>
+  <script src="../js/quest-data.js" defer></script>
+<script src="../js/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
